@@ -16,11 +16,11 @@ const StyledCharacter = styled.div`
     font-size: 1.5em;
 `
 
-export default function Character({characters}){
-
-    return(  
+export default function Character(props){
+    const {newCharacter} = props;
+    return(
         <StyledCharacter>
-           {characters.name}
+            {newCharacter.name}
         </StyledCharacter> 
-    );
+    )
 };

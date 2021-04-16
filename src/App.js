@@ -24,15 +24,11 @@ const App = () => {
   }, []);
 
   return ( 
-   
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {
-        characters.map(item => {
-          return <Character key={item.url} characters={characters} />;
-        })
-       
-      }  
+      {characters.map((character) => {
+        return <Character key={character.name} newCharacter={character} />
+      })}
     </div>
   );
 }
